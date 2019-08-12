@@ -82,7 +82,41 @@
 </div> <!-- end of grid --> 
 
 <!-- scripts -->
+<script>
+  // define constant thay will hook onto the the table body with the id of tableTarget
+    const TableBody = document.getElementById('tableTarget');
+        
+  // will load the json file directly after DOM is loaded
+    document.addEventListener('DOMContentLoaded', ()=> {loadChampions();
+    });
+  //function that will load the wimbledon.json file to the page
+    function loadChampions(){
+    
+    const request = new XMLHttpRequest();
+        request.open('get', './wimbledon.json');
+            request.onload = () => {
+                const json = JSON.parse(request.responseText);   
+                    json.forEach((row) => {
+                const tr = document.createElement('tr');
+                    row.forEach((cell) => {
+                const td = document.createElement('td');
+                    td.textContent = cell;
+                    tr.appendChild(td);
+  });
 
+                TableBody.appendChild(tr);
+
+});    
+
+    };
+// if there is an error loading the json then display an error message
+    request.onerror = function () {
+  alert('sorry there was an error loading the data');
+}
+// send the request
+    request.send();
+}
+</script>
         <script src="https://use.fontawesome.com/4f50d7a23b.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
