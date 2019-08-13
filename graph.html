@@ -4,18 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/cosmo/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <title>My Chart.js Chart</title>
 </head>
 <body>
+  <!-- nav  -->
+
+        <nav class="navbar navbar-expand-sm bg-warning navbar-dark mb-3">
+              <div class="container">
+                  <a href="index.html" class="navbar-brand font-weight-bold">Modern Tennis Champions</a>
+                      <span class="pl-3 text-light d-none d-lg-block">Men's Champions of the Open Era</span>
+                          <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdown">
+                                <span class="navbar-toggler-icon"></span>
+                          </button>
+                    <div class="collapse navbar-collapse" id="dropdown">
+                          <ul class="navbar-nav ml-auto">
+                              <li class="nav-item">
+                                <a href="index.html" class="nav-link text-light">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="graph.html" class="nav-link text-light">Graph</a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="australian.html" class="nav-link text-light">Australian</a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="french.html" class="nav-link text-light">French</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="wimbledon.html" class="nav-link text-light">Wimbledon</a>
+                                </li>
+                              <li class="nav-item">
+                                <a href="us.html" class="nav-link text-light">US</a>
+                              </li>
+                          </ul>
+                    </div> <!-- end of navbar collapse -->
+              </div> <!-- end of container -->
+        </nav> <!-- end of nav -->
+
   <div class="container">
    
-  <button class=" btn btn-secondary"><a href="index.html">Return to homepage</a></button>
-    <canvas id="myChart">
+      <canvas id="myChart">
       
-    
-    </canvas>
+      </canvas>
 
   </div>
 
@@ -44,13 +79,13 @@
           ],
           //backgroundColor:'green',
           backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 206, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(153, 102, 255, 0.6)',
-            'rgba(255, 159, 64, 0.6)',
-            'rgba(255, 99, 132, 0.6)'
+            'rgba(66,139,202, 1)',
+            'rgba(66,139,202, 1)',
+            'rgba(66,139,202, 1)',
+            'rgba(66,139,202, 1)',
+            'rgba(66,139,202, 1)',
+            'rgba(66,139,202, 1)',
+            'rgba(66,139,202, 1)'
           ],
           borderWidth:1,
           borderColor:'#777',
@@ -68,7 +103,7 @@
     },
         title:{
           display:true,
-          text:'All Time Number of Mens Grand Slam Tennis Titles',
+          text:'Modern Records: Mens Grand Slam Tennis Titles',
           fontSize:25
         },
         legend:{
