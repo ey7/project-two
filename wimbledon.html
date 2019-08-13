@@ -93,7 +93,7 @@
     function loadChampions(){
     
     const request = new XMLHttpRequest();
-        request.open('get', './wimbledon.json');
+        request.open('get', '../resources/wimbledon.json');
             request.onload = () => {
                 const json = JSON.parse(request.responseText);   
                     json.forEach((row) => {
@@ -143,9 +143,9 @@ function search() {
 // ensure that input window has focus when the page is opened
     input.focus();
 //clear searchbox function for a new search
-function clearInput(){
- input.value = " ";
-window.location.reload();
+  function clearInput(){
+      input.value = " ";
+      window.location.reload();
 }
 // add event listener to the clear variable to clear searchbox
 
