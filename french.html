@@ -2,16 +2,32 @@
 <html lang="en">
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content= "width=device-width, initial-scale=1.0" >
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
+   <meta charset="UTF-8">
+     <meta name="viewport" content= "width=device-width, initial-scale=1.0" >
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/cosmo/bootstrap.min.css">
-	<title>French Open Champions</title>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="../scripts/pagination.js"></script> 
+  <title>French Open Men's Champions</title>
+<style>
+ .page-navigation a {
+  margin: 0 2px;
+  display: inline-block;
+  padding: 3px 5px;
+  color: #ffffff;
+  background-color: #70b7ec;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.page-navigation a[data-selected] {
+  background-color: #3d9be0;
+}
+ </style>
 </head>
 <body>
-	<div class="grid">
+  <div class="grid">
 <!-- nav  -->
 
         <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
@@ -46,20 +62,108 @@
               </div> <!-- end of container -->
         </nav> <!-- end of nav -->
 
-        <div class="container">
+<div class="container">
 
             <!-- main content goes here -->
-               <p> this is a space filer for now </p>
+      <h1 class="mt-3 mb-3">Open Era French Open Men's Champions</h1>
+            <!-- searchbox -->
+        <input class="mb-3 mr-3" type="text" id="myInput" onfocus="this.value=''" onkeyup="search()" placeholder="Champion Search" title="Enter a player name"></input>
+              <!-- new search button -->
+          <button class="btn btn-outline-primary" id="clear">New Search</button>
+    <table class="table table-bordered table-striped" id="championsTable">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Champion</th>
+                <th>Country</th>
+                <th>Runner Up</th>   
+            </tr>
+        </thead>
+            <tbody id="tableTarget">
+                
+            </tbody>
 
-          </div> <!-- end of container -->
+    </table> 
+
+</div> <!-- end of container -->
 
 
 </div> <!-- end of grid --> 
 
 <!-- scripts -->
+<script>
+  // define constant that will hook onto the the table body with the id of tableTarget
+    const TableBody = document.getElementById('tableTarget');
+        
+  // will load the json file directly after DOM is loaded
+    document.addEventListener('DOMContentLoaded', ()=> {loadChampions();
+    });
+  //function that will load the french.json file to the page
+    function loadChampions(){
+    
+    const request = new XMLHttpRequest();
+        request.open('get', '../resources/french.json');
+            request.onload = () => {
+                const json = JSON.parse(request.responseText);   
+                    json.forEach((row) => {
+                const tr = document.createElement('tr');
+                    row.forEach((cell) => {
+                const td = document.createElement('td');
+                    td.textContent = cell;
+                    tr.appendChild(td);
+  });
 
+                TableBody.appendChild(tr);
+
+});    
+// add pagination to the loaded page 
+      $('#championsTable').paginate({ limit: 10 });
+    };
+// if there is an error loading the json then display an error message
+    request.onerror = function () {
+  alert('sorry there was an error loading the data');
+}
+// send the request
+    request.send();
+}
+
+// search function
+function search() {
+  var input, filter, table, tr, td, i, txtValue;
+
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("championsTable");
+    tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+    txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+//variables
+  var input = document.getElementById("myInput");
+  var clear = document.getElementById('clear');
+// ensure that input window has focus when the page is opened
+    input.focus();
+//clear searchbox function for a new search
+  function clearInput(){
+      input.value = " ";
+      window.location.reload();
+}
+// add event listener to the clear variable to clear searchbox
+
+clear.addEventListener('click', clearInput);
+
+</script>
         <script src="https://use.fontawesome.com/4f50d7a23b.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
