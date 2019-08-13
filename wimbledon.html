@@ -9,13 +9,28 @@
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="../scripts/pagination.js"></script> 
 	<title>Wimbledon Champions</title>
+<style>
+ .page-navigation a {
+  margin: 0 2px;
+  display: inline-block;
+  padding: 3px 5px;
+  color: #ffffff;
+  background-color: #70b7ec;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.page-navigation a[data-selected] {
+  background-color: #3d9be0;
+}
+ </style>
 </head>
 <body>
 	<div class="grid">
 <!-- nav  -->
 
-        <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
               <div class="container">
                   <a href="index.html" class="navbar-brand font-weight-bold">Modern Tennis Champions</a>
                       <span class="pl-3 text-light d-none d-lg-block">Wimbledon Men's Champions</span>
@@ -54,7 +69,7 @@
             <!-- searchbox -->
         <input class="mb-3 mr-3" type="text" id="myInput" onfocus="this.value=''" onkeyup="search()" placeholder="Champion Search" title="Enter a player name"></input>
               <!-- new search button -->
-          <button class="btn btn-success" id="clear">New Search</button>
+          <button class="btn btn-primary" id="clear">New Search</button>
     <table class="table table-bordered table-striped" id="championsTable">
         <thead>
             <tr>
@@ -73,7 +88,7 @@
 </div> <!-- end of container -->
 <!-- footer -->
 
-            <footer class="footer bg-success">
+            <footer class="footer bg-primary">
                 <h2 class="footer-logo text-light  text-center pt-3">Modern Tennis Champions</h2>
                    
                   <h4 class=" d-none d-md-block text-light text-right pr-5 pb-3 ">Open Era Champions</h4>
