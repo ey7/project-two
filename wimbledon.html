@@ -137,6 +137,15 @@ function search() {
     }       
   }
 }
+//variables
+var input = document.getElementById("myInput");
+var clear = document.getElementById('clear');
+
+//clear searchbox function for a new search
+function clearInput(){
+ input.value = " ";
+window.location.reload();
+}
 </script>
         <script src="https://use.fontawesome.com/4f50d7a23b.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
