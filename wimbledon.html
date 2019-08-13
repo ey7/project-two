@@ -77,6 +77,36 @@
 </div> <!-- end of grid --> 
 
 <!-- scripts -->
+<script>
+  //function that will load the wimbledon.json file to the page
+  function loadChampions(){
+    
+    const request = new XMLHttpRequest();
+        request.open('get', '../resources/wimbledon.json');
+            request.onload = () => {
+                const json = JSON.parse(request.responseText);   
+                    json.forEach((row) => {
+                const tr = document.createElement('tr');
+                    row.forEach((cell) => {
+                const td = document.createElement('td');
+                    td.textContent = cell;
+                    tr.appendChild(td);
+  });
+
+                TableBody.appendChild(tr);
+
+});    
+// add pagination to the loaded page 
+      $('#championsTable').paginate({ limit: 10 });
+    };
+// if there is an error loading the json then display an error message
+    request.onerror = function () {
+  alert('sorry there was an error loading the data');
+}
+// send the request
+    request.send();
+}
+</script>
         <script src="../scripts/script.js"></script> 
         <script src="../scripts/pagination.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
