@@ -50,26 +50,26 @@
               </div> <!-- end of container -->
         </nav> <!-- end of nav -->
 
-  <div class="container">
+  <div class="container" style="position: relative; height:79vh; width:100vw"> 
    
       <canvas id="myChart">
       
       </canvas>
 
-  </div>
+ </div> 
 
   <script>
     let myChart = document.getElementById('myChart').getContext('2d');
 
     // Global Options
-    Chart.defaults.global.defaultFontFamily = 'Lato';
-    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontFamily = 'Arial';
+    Chart.defaults.global.defaultFontSize = 12;
     Chart.defaults.global.defaultFontColor = '#777';
 
     let massPopChart = new Chart(myChart, {
       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Pete Sampras', 'Roy Emerson', 'Rod Laver', 'Bjorn Borg'],
+        labels:['R. Federer', 'R. Nadal', 'N. Djokovic', 'P. Sampras', 'R. Emerson', 'R. Laver', 'B. Borg'],
         datasets:[{
           label:'Grand Slam Titles',
           data:[
@@ -97,7 +97,9 @@
           hoverBorderColor:'#000'
         }]
       },
-      options:{
+      options:
+      
+      { maintainAspectRatio: false,
         scales: {
         yAxes: [{
             ticks: {
@@ -107,19 +109,19 @@
     },
         title:{
           display:true,
-          text:'Modern Records: Mens Grand Slam Tennis Titles',
+          text:'Mens Grand Slam Tennis Title Leaders',
           fontSize:25
         },
         legend:{
           display:true,
-          position:'right',
+          position:'bottom',
           labels:{
             fontColor:'#000'
           }
         },
         layout:{
           padding:{
-            left:50,
+            left:0,
             right:0,
             bottom:0,
             top:0
