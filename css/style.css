@@ -20,3 +20,6 @@ body {
 .page-navigation a[data-selected] {
   background-color: #3d9be0;
 }
+#FedererModalLabel {
+  font-weight: 600;
+}
