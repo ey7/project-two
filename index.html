@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
               <div class="container">
                   <a href="index.html" class="navbar-brand font-weight-bold">Modern Tennis Champions</a>
-                      <span class="pl-3 text-light d-none d-lg-block">Men's Champions of the Open Era</span>
+                      <span class="pl-3 text-light d-none d-lg-block">Open Era Men's Champions</span>
                           <button class="navbar-toggler" data-toggle="collapse" data-target="#dropdown">
                                 <span class="navbar-toggler-icon"></span>
                           </button>
@@ -51,8 +51,34 @@
 
 
 <div class="container">
-	<h2 class="mt-3"> The top 7 players of the Open Era by titles won</h2>
+	<h2 class="mt-3">Top Open Era Tennis Stars</h2>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Roger Federer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>20 Grand Slams</p>
+        <p>6 Australian Opens</p>
+        <p>1 French Open</p>
+        <p>8 Wimbledons</p>
+        <p>5 US Opens</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-sm btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
 <div class="row">
                     <!--grid item, containing a card-->
                     <div class="col-sm-4 mb-4">
@@ -61,7 +87,10 @@
                                   <div class="card-body">
                                       <h5 class="card-title font-weight-bold">Roger Federer (20)</h5>
                                     <p class="card-text">With a record 20 Grand Slam titles, Federer is considered to be the greatest tennis player of all time.</p>
-                                    <a href="#" class="btn btn-outline-primary">More info</a>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+  More Info
+</button>
                                   </div>
                           </div>
                     </div>
