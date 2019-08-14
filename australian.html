@@ -84,7 +84,7 @@
     
         const request = new XMLHttpRequest();
         
-        request.open('get', '../resources/australian.json');
+        request.open('get', 'resources/australian.json');
             request.onload = () => {
                 const json = JSON.parse(request.responseText);   
                     json.forEach((row) => {
