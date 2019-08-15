@@ -26,10 +26,33 @@ body {
   font-weight: 600;
 }
 
+/*-------------------band------------------------------*/
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  justify-self: flex-start;
+}
+.card-body a {
+  align-self: flex-start;
+}
+
 /*media queries for small screens*/
 /* add margin of 20px to the bottom of the "New Search" button on records pages*/
 @media screen and (max-width: 395px) {
 #clear{ margin-bottom: 20px;
-
+}
+.card-img-top {
+  width: 100%;
+  height: 160px;
 }
 }
