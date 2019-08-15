@@ -6,6 +6,7 @@ body {
 	padding: 0;
 	background-color: #fff;
 }
+/* styling for the pagination buttons*/
 .page-navigation a {
   margin: 0 2px;
   display: inline-block;
@@ -20,6 +21,7 @@ body {
 .page-navigation a[data-selected] {
   background-color: #3d9be0;
 }
+/* to make the modal header bold on the modal*/
 #FedererModalLabel {
   font-weight: 600;
 }
