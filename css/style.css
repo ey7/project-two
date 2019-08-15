@@ -26,25 +26,25 @@ body {
   font-weight: 600;
 }
 
-/*-------------------band------------------------------*/
+/*-------------------styling for cards on index page------------------------------*/
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   height: 100%;
 }
-
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .card-text {
   justify-self: flex-start;
 }
-.card-body a {
+
+.card-body button {
   align-self: flex-start;
 }
+
 
 /*media queries for small screens*/
 /* add margin of 20px to the bottom of the "New Search" button on records pages*/
