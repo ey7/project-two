@@ -23,3 +23,11 @@ body {
 #FedererModalLabel {
   font-weight: 600;
 }
+
+/*media queries for small screens*/
+/* add margin of 20px to the bottom of the "New Search" button on records pages*/
+@media screen and (max-width: 395px) {
+#clear{ margin-bottom: 20px;
+
+}
+}
