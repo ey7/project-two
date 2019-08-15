@@ -22,7 +22,7 @@ body {
   background-color: #3d9be0;
 }
 /* to make the modal header bold on the modal*/
-#FedererModalLabel {
+#modalLabel {
   font-weight: 600;
 }
 
