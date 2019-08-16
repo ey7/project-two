@@ -58,7 +58,7 @@ The website consists of six pages, including a homepage, four tournament records
 - The developer console was used throughout the project to check for javascript errors and issues.
 - The links and buttons on all pages were manually tested to ensure everything was working correctly.
 - All breakpoints were tested for different screen sizes and viewports.
-- The site was tested on[Responsinator](https://www.responsinator.com/) to ensure that the site pages were rendering correctly on all types of devices and orientations, sudh as Ipad and Iphone.
+- The site was tested on [Responsinator](https://www.responsinator.com/) to ensure that the site pages were rendering correctly on all types of devices and orientations, sudh as Ipad and Iphone.
 - The website was put through the [HTML5](https://validator.w3.org/) and [CSS Validator](https://jigsaw.w3.org/css-validator/) and did not yield any errors.
 - I also tested the website on [google mobile friendly](https://search.google.com/test/mobile-friendly) and recieved a mobile friendly result. 
 - I tested the website on personal and other family devices such as my laptop and android mobile phone, iPad and iPhone and Samsung Galaxy Tab in both potrait and landscape orientations.
@@ -80,8 +80,9 @@ The website consists of six pages, including a homepage, four tournament records
 4. On medium screen sizes the navbar did not render correctly with too many elements displaying.
 5. On small screen sizes below 400px the tables were not responsive and the right hand table content was not visible.
 6. The Chart JS will only render font that is installed on the user's machine and will not work with google fonts.
-7. There was four individual JSON files with four individual XMLHTTPReequests for ech page to load the content. I needed to find a way to add an if statement to reduce code repetition.
-8. Search functionality worked well on the records pages but when a search was made and the backspace button was used to clear the searchbox, the page was then no longer paginated, and you had a long list of 50 something records scrolling down the page.
+7. On long pages I relaised that there is no way for the user to quickly scroll to the top of the page.
+8. There was four individual JSON files with four individual XMLHTTPReequests for each page to load the content. I needed to find a way to add an if statement to reduce code repetition.
+9. Search functionality worked well on the records pages but when a search was made and the backspace button was used to clear the searchbox, the page was then no longer paginated, and you had a long list of 50 something records scrolling down the page.
 
 ## Investigation and resolution of issues
 
@@ -91,8 +92,9 @@ The website consists of six pages, including a homepage, four tournament records
 4. I changed the bootstrap code to make the navbar hamburger icon menu appear at medium screen sizes.
 5. I modified the bootstrap code to make the tables more compact and responsive at small screen sizes.
 6. I was not able to match up the font on the Chart to Exo 2 and settled for a generic arial font which works but is not ideal from an aesthethic point of view.
-7. Still under investigation.
+7. I added a scroll to top arrow, by modifying an example from W3 Schools with an svg arrow instead of a button.
 8. Still under investigation.
+9. Still under investigation.
 
 ## Further improvements to be made to site
 
@@ -103,13 +105,17 @@ The website consists of six pages, including a homepage, four tournament records
 ## Image credits
 
 - Card images (x7) with creative commons license on home page courtesy of [flickr](https://www.flickr.com/).
+- The flag icons for the popout modals were sourced for free from [country flags](https://www.countryflags.com/)
 - The tennis ball favicon for the site was downloaded for free from [iconscout](https://iconscout.com/icon/game-sports-sport-tennis-ball-play-6).
+- The svg icon for the scroll to top arrow was taken for free from [iconscout](https://iconscout.com).
 
 ## Acknowledgements
 
 - I did not want to reinvent the wheel and used [pagination js](https://pagination.js.org/) for the pagination functionality, and included a minified version of their script.
 
 - I used the search script to filter a table from [W3 Schools](https://www.w3schools.com/howto/howto_js_filter_table.asp), to implement the search functionality on the tennis records tables.
+
+- Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) for their example of the implementation of the scroll to top button. I modifying their example for my own app with an svg arrow.
   
 - Thanks to [Chart JS](https://www.chartjs.org/) for a simple and easy to use visual chart implementation for the bar chart on the graph.html page.
 
