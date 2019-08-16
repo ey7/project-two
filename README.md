@@ -5,7 +5,8 @@ Build a website app for the Code Institute Interactive Frontend module. I chose 
 
  ## Design Planning
 
-Please view the [project strategy document](planning.md) for the website, which details the project strategy, including the project planning of the UX and UI, customer stories, scope, structure, skeleton and surface. I used [Figma](https://www.figma.com) for the intial website design of the homepage.
+Please view the [project strategy document](planning.md) for the website, which details the project strategy, including the project planning of the UX and UI, customer stories, scope, structure, skeleton and surface. I used [Figma](https://www.figma.com) for the intial website design of the homepage. [Mobile view design](https://www.figma.com/file/IHMmjFHnGdtrWzdgJUOkhr/Interactive-Frontend-Mobile-View?node-id=0%3A1).
+[Desktop View Design](https://www.figma.com/file/bhWl1GftpCrjnhSJfQ3AUI/Interactive-Frontend-Desktop-View).
 
   - The website homepage will feature the main 7 biggest tennis champions of the modern era, with popout modals that display individual stats.
   - The aim is for an interactive, simple, easy to use website that allows tennis fans and those interested in tennis history to browse the records of the modern champions, and the records from the four Grand Slam tournaments, held each year.
@@ -80,8 +81,8 @@ The website consists of six pages, including a homepage, four tournament records
 4. On medium screen sizes the navbar did not render correctly with too many elements displaying.
 5. On small screen sizes below 400px the tables were not responsive and the right hand table content was not visible.
 6. The Chart JS will only render font that is installed on the user's machine and will not work with google fonts.
-7. On long pages I relaised that there is no way for the user to quickly scroll to the top of the page.
-8. There was four individual JSON files with four individual XMLHTTPReequests for each page to load the content. I needed to find a way to add an if statement to reduce code repetition.
+7. On long pages I realised that there is no way for the user to quickly scroll to the top of the page.
+8. There was four individual JSON files with four individual XMLHTTPRequests for each page to load the content. I needed to find a way to add an if statement to reduce code repetition.
 9. Search functionality worked well on the records pages but when a search was made and the backspace button was used to clear the searchbox, the page was then no longer paginated, and you had a long list of 50 something records scrolling down the page.
 
 ## Investigation and resolution of issues
@@ -115,7 +116,7 @@ The website consists of six pages, including a homepage, four tournament records
 
 - I used the search script to filter a table from [W3 Schools](https://www.w3schools.com/howto/howto_js_filter_table.asp), to implement the search functionality on the tennis records tables.
 
-- Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) for their example of the implementation of the scroll to top button. I modifying their example for my own app with an svg arrow.
+- Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) for their example of the implementation of the scroll to top button. I modified their example for my own app with an svg arrow.
   
 - Thanks to [Chart JS](https://www.chartjs.org/) for a simple and easy to use visual chart implementation for the bar chart on the graph.html page.
 
