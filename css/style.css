@@ -21,9 +21,10 @@ body {
 .page-navigation a[data-selected] {
   background-color: #3d9be0;
 }
-/* to make the modal header bold on the modal*/
+/* to make the modal header bold on the modal and give it margin right*/
 #modalLabel {
   font-weight: 600;
+  margin-right:20px;
 }
 
 /*-------------------styling for cards on index page------------------------------*/
