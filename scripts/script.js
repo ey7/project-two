@@ -15,7 +15,7 @@
         filter = input.value.toUpperCase();
         table = document.getElementById("championsTable");
             tr = table.getElementsByTagName("tr");
-              for (i = 0; i < tr.length; i++) {
+                for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[1];
                 if (td) {
                     txtValue = td.textContent || td.innerText;
