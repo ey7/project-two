@@ -1,8 +1,8 @@
-# Code Institute Milestone 2 project
+# Tennis Stars app
 
 ## Interactive Men's Tennis Champions website app
-Build a website app for the Code Institute Interactive Frontend module. I chose to build an interactive website that features the champions and records of the modern men's professional tennis era since 1968. The link for the website: [Tennis website](https://ey7.github.io/project-two).  
-
+Tennis Stars is an interactive website that features the champions and records of modern men's professional tennis, since the Open Era of professional tennis began in 1968. The app is designed to appeal to tennis fans, journalists, historians and anyone with an interest in modern tennis history. The homepage features the top seven male stars from 1968 to the present day. There is also a chart.js graph that lists the all time champions. The tournament records of the four Grand Slams (Wimbledon, French, Australian and US Opens) can be viewed in table format with searchbox and pagination functionality. Please click on the following link to view the app: [Tennis Stars](https://ey7.github.io/project-two).  
+<img src="images/responsive.png" alt="responsive design viewports" style="max-width:100%;">
  ## Design Planning
 
 Please view the [project strategy document](planning.md) for the website, which details the project strategy, including the project planning of the UX and UI, customer stories, scope, structure, skeleton and surface. I used [Figma](https://www.figma.com) for the intial website design of the homepage. [Mobile view design](https://www.figma.com/file/IHMmjFHnGdtrWzdgJUOkhr/Interactive-Frontend-Mobile-View?node-id=0%3A1).
