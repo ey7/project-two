@@ -1,3 +1,4 @@
+
 body {
 	font-family:'Exo 2', sans-serif;
 	font-size: 16px;
@@ -6,7 +7,7 @@ body {
 	padding: 0;
 	background-color: #fff;
 }
-/* styling for the pagination buttons*/
+/*styling for the pagination buttons*/
 .page-navigation a {
   margin: 0 2px;
   display: inline-block;
@@ -17,18 +18,15 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
-.page-navigation a[data-selected] {
+.page-navigation a [data-selected] {
   background-color: #3d9be0;
 }
-/* to make the modal header bold on the modal and give it margin right*/
+/*to make the modal header bold on the modal and give it margin right*/
 #modalLabel {
   font-weight: 600;
   margin-right:20px;
 }
-
-/*-------------------styling for cards on index page------------------------------*/
-
+/*styling for cards on index page*/
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   height: 100%;
@@ -41,35 +39,30 @@ body {
 .card-text {
   justify-self: flex-start;
 }
-
 .card-body button {
   align-self: flex-start;
 }
-
-/*--------------- styling for scroll to top button -----------*/
-
+/*styling for scroll to top button*/
 #scrollButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  cursor: pointer;
+  cursor: pointer; /* add a cursor pointer on hover */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   height: 32px;
   width: 32px;
 }
-
 #scrollButton:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
-
 /*media queries for small screens*/
 /* add margin of 20px to the bottom of the "New Search" button on records pages*/
 @media screen and (max-width: 395px) {
-#clear{ margin-bottom: 20px;
+  #clear { margin-bottom: 20px;
 }
-.card-img-top {
-  width: 100%;
-  height: 160px;
+  .card-img-top {
+    width: 100%;
+    height: 160px;
 }
 }
