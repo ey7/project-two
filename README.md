@@ -62,7 +62,7 @@ The website consists of six pages, including a homepage, four tournament records
 - The links and buttons on all pages were manually tested to ensure everything was working correctly.
 - All breakpoints were tested for different screen sizes and viewports.
 - The app was tested on [Responsinator](https://www.responsinator.com/) and [Am I Responsive](http://ami.responsivedesign.is/) to ensure that the site pages were rendering correctly on all types of devices and orientations, such as Ipad and Iphone.
-- The app was put through the [HTML5](https://validator.w3.org/) and some errors and warnings related to stray tags and duplicate ids were fixed.
+- The app was put through the [HTML5 Validator](https://validator.w3.org/) and some errors and warnings related to stray tags and duplicate ids were fixed.
 - The app was put through [CSS Validator](https://jigsaw.w3.org/css-validator/) and some errors were uncovered related to the bootstrap css which is not something that I can control. My own css code was error free.
 - I also tested the website on [google mobile friendly](https://search.google.com/test/mobile-friendly) and recieved a mobile friendly result. 
 - I tested the website on personal and other family devices such as my laptop and android mobile phone, iPad and iPhone and Samsung Galaxy Tab in both potrait and landscape orientations.
@@ -86,7 +86,7 @@ The website consists of six pages, including a homepage, four tournament records
 6. The Chart JS will only render font that is installed on the user's machine and will not work with google fonts.
 7. On long pages I realised that there is no way for the user to quickly scroll to the top of the page.
 8. There was four individual JSON files with four individual XMLHTTPRequests for each page to load the content. I needed to find a way to add an if statement to reduce code repetition.
-9. Search functionality worked well on the records pages but when a search was made and the backspace button was used to clear the searchbox, the page was then no longer paginated, and you had a long list of 50 something records scrolling down the page.
+9. Search functionality worked well on the records pages but when a search was made and the backspace button was used to clear the searchbox, on some devices the page was then no longer paginated, and you had a long list of 50 something records scrolling down the page.
 
 ## Investigation and resolution of issues
 
@@ -121,7 +121,7 @@ The website consists of six pages, including a homepage, four tournament records
 
 - Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) for their example of the implementation of the scroll to top button. I modified their example for my own app with an svg arrow.
   
-- Thanks to [Chart JS](https://www.chartjs.org/) for a simple and easy to use visual chart implementation for the bar chart on the graph.html page. I tweaked and modified their base example to suit my needs, and was please with the result.
+- Thanks to [Chart JS](https://www.chartjs.org/) for a simple and easy to use visual chart implementation for the bar chart on the graph.html page. I tweaked and modified their base example to suit my needs, and was pleased with the result.
 
 ## How to deploy your own version of the website
 
