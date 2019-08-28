@@ -25,7 +25,7 @@
       background-color: #3d9be0;
     }
     /*to make the modal header bold on the modal and give it margin right*/
-    #modalLabel {
+    .modal-title {
       font-weight: 600;
       margin-right:20px;
     }
