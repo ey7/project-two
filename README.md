@@ -1,7 +1,7 @@
 # Tennis Stars app
 
 ## Interactive Men's Tennis Champions website app
-Tennis Stars is an interactive website that features the champions and records of modern men's professional tennis, since the Open Era of professional tennis began in 1968. The app is designed to appeal to tennis fans, journalists, historians and anyone with an interest in modern tennis history. The homepage features the top seven male stars from 1968 to the present day. There is also a chart.js graph that lists the all time champions. The tournament records of the four Grand Slams (Wimbledon, French, Australian and US Opens) can be viewed in table format with searchbox and pagination functionality. Please click on the following link to view the app: [Tennis Stars](https://ey7.github.io/project-two).  <hr>
+Tennis Stars is an interactive website that features the champions and records of modern men's professional tennis, since the Open Era of professional tennis began in 1968. The app is designed to appeal to tennis fans, journalists, historians and anyone with an interest in modern men's tennis history. The homepage features the top seven male stars from 1968 to the present day. There is also a chart.js graph that lists the all time champions. The tournament records of the four Grand Slams (Wimbledon, French, Australian and US Opens) can be viewed in table format with searchbox and pagination functionality. Please click on the following link to view the app: [Tennis Stars](https://ey7.github.io/project-two).  <hr>
 <img src="images/responsive.png" alt="responsive design viewports" style="max-width:100%;">
  ## Design Planning
 
@@ -27,9 +27,10 @@ The website consists of six pages, including a homepage, four tournament records
 ## Website Features
 
 - Pop out modals on the homepage that display the key stats for major champions.
+- A responsive visual bar chart that lists the records of the seven biggest champions of the Open Era.
 - Responsive navigation with "hamburger" drop down menu icon for small and medium screens.
 - Pagination implemented with javascript on records pages, limited to 10 records per page.
-- Search functionality for tennis champions on records tables with javscript.
+- Search functionality for tennis champions on records tables with javascript, the user can search for a particular champions and find the year in which he was champion, if any.
 - With no tennis api available, 4 x hard coded JSON files with XMLHTTPRequests will load the records to the individual pages.
 
 ## Technologies Used
@@ -51,16 +52,18 @@ The website consists of six pages, including a homepage, four tournament records
 - [W3 Schools](https://www.w3schools.com/)
 - [CSS Tricks](https://css-tricks.com/)
 - [Responsinator](https://www.responsinator.com/)
+- [Am I Responsive](http://ami.responsivedesign.is/)
 - Google
   
 ## Testing
 
-- The website was tested using developer tools throughout the project on multiple browsers - Chrome, Mozilla & Opera etc.
+- The app was tested using developer tools throughout the project on multiple browsers - Chrome, Mozilla & Opera etc.
 - The developer console was used throughout the project to check for javascript errors and issues.
 - The links and buttons on all pages were manually tested to ensure everything was working correctly.
 - All breakpoints were tested for different screen sizes and viewports.
-- The site was tested on [Responsinator](https://www.responsinator.com/) to ensure that the site pages were rendering correctly on all types of devices and orientations, sudh as Ipad and Iphone.
-- The website was put through the [HTML5](https://validator.w3.org/) and [CSS Validator](https://jigsaw.w3.org/css-validator/) and did not yield any errors.
+- The app was tested on [Responsinator](https://www.responsinator.com/) and [Am I Responsive](http://ami.responsivedesign.is/) to ensure that the site pages were rendering correctly on all types of devices and orientations, such as Ipad and Iphone.
+- The app was put through the [HTML5](https://validator.w3.org/) and some errors and warnings related to stray tags and duplicate ids were fixed.
+- The app was put through [CSS Validator](https://jigsaw.w3.org/css-validator/) and some errors were uncovered related to the bootstrap css which is not something that I can control. My own css code was error free.
 - I also tested the website on [google mobile friendly](https://search.google.com/test/mobile-friendly) and recieved a mobile friendly result. 
 - I tested the website on personal and other family devices such as my laptop and android mobile phone, iPad and iPhone and Samsung Galaxy Tab in both potrait and landscape orientations.
 
@@ -94,8 +97,8 @@ The website consists of six pages, including a homepage, four tournament records
 5. I modified the bootstrap code to make the tables more compact and responsive at small screen sizes.
 6. I was not able to match up the font on the Chart to Exo 2 and settled for a generic arial font which works but is not ideal from an aesthethic point of view.
 7. I added a scroll to top arrow, by modifying an example from W3 Schools with an svg arrow instead of a button.
-8. Still under investigation.
-9. Still under investigation.
+8. Still under investigation. From some research, I understand that frameworks ike React make this easier to implement.
+9. Still under investigation, it does not appear to be an issue on all devices.
 
 ## Further improvements to be made to site
 
@@ -106,7 +109,7 @@ The website consists of six pages, including a homepage, four tournament records
 ## Image credits
 
 - Card images (x7) with creative commons license on home page courtesy of [flickr](https://www.flickr.com/).
-- The flag icons for the popout modals were sourced for free from [country flags](https://www.countryflags.com/)
+- The flag icons for the popout modals were sourced for free from [country flags](https://www.countryflags.com/).
 - The tennis ball favicon for the site was downloaded for free from [iconscout](https://iconscout.com/icon/game-sports-sport-tennis-ball-play-6).
 - The svg icon for the scroll to top arrow was taken for free from [iconscout](https://iconscout.com).
 
@@ -118,13 +121,13 @@ The website consists of six pages, including a homepage, four tournament records
 
 - Thanks to [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) for their example of the implementation of the scroll to top button. I modified their example for my own app with an svg arrow.
   
-- Thanks to [Chart JS](https://www.chartjs.org/) for a simple and easy to use visual chart implementation for the bar chart on the graph.html page.
+- Thanks to [Chart JS](https://www.chartjs.org/) for a simple and easy to use visual chart implementation for the bar chart on the graph.html page. I tweaked and modified their base example to suit my needs, and was please with the result.
 
 ## How to deploy your own version of the website
 
  - Ensure that git is installed on your machine.
  - Visit the repository, and Click 'Clone or download' and copy the code for http.
- - Open a terminal in your root directory, i.e. the directory where you want to download the website files
+ - Open a terminal in your root directory, i.e. the directory where you want to download the website files.
  - Type 'git clone ' followed by the link for the github repository that you want to clone/download, for example 
  	git clone https://github.com/ey7/project-two.git
  - When this completes you have your own version of the website, which you are free to alter as you wish.
